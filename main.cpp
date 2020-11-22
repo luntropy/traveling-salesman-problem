@@ -25,15 +25,28 @@ int main() {
     // Generate population
     population->generate_population();
 
-    int itr = 0;
-    while (itr < 1000) {
-        population->new_generation();
+    int gen = 0;
+    double prev_eval = population->get_total_eval();
+    std::cout << "Initial generation (" << gen << "): ";
+    population->print_total_eval();
+    ++gen;
 
-        if (itr % 50 == 0) {
-            std::cout << "Generation " << itr << ": ";
+    while (true) {
+        population->new_generation();
+        double current_eval = population->get_total_eval();
+
+        if (prev_eval == current_eval) {
+            std::cout << "Last generation (" << gen << "): ";
+            population->print_total_eval();
+            break;
+        }
+        prev_eval = current_eval;
+
+        if (gen == 10 || gen % N == 0) {
+            std::cout << "Generation (" << gen << "): ";
             population->print_total_eval();
         }
-        ++itr;
+        ++gen;
     }
 
     delete population;

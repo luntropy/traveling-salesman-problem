@@ -113,6 +113,9 @@ void Population::generate_population() {
         Chromosome* chromosome = new Chromosome(this->genes);
         this->population.push_back(chromosome);
     }
+
+    this->total_fitness = this->calc_total_fitness();
+    this->total_eval = this->calc_total_eval();
 }
 
 std::vector<double> Population::calc_prob_of_selection() {
