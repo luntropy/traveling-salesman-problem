@@ -281,6 +281,11 @@ void Population::print_genes() const {
     }
 }
 
+void Population::print_best_path() {
+    std::sort(this->population.begin(), this->population.end(), compare_chromosomes_eval());
+    this->population.at(0)->print_eval();
+}
+
 void Population::print_total_fitness() const {
     std::cout << this->total_fitness << std::endl;
 }

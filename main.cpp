@@ -7,15 +7,18 @@
 #include "Population.h"
 
 // Population settings
-unsigned long int L = 100; // Size of population
-double old_gen_pct = 0.3;
-double mutation_pct = 0.55;
+unsigned long int L = 200; // Size of population - 2 * N
+double old_gen_pct = 1 / 200; // How many individuals to keep from old generation - 1 / pop_size
+double mutation_pct = 0.25;
 
 int main() {
     srand(time(NULL));
 
     unsigned long int N;
     std::cin >> N;
+
+    L = 2 * N;
+    old_gen_pct = 1 / L;
 
     Population* population = new Population(N, L, old_gen_pct, mutation_pct);
 
@@ -37,14 +40,16 @@ int main() {
 
         if (prev_eval == current_eval) {
             std::cout << "Last generation (" << gen << "): ";
-            population->print_total_eval();
+            // population->print_total_eval();
+            population->print_best_path();
             break;
         }
         prev_eval = current_eval;
 
         if (gen == 10 || gen % N == 0) {
             std::cout << "Generation (" << gen << "): ";
-            population->print_total_eval();
+            // population->print_total_eval();
+            population->print_best_path();
         }
         ++gen;
     }

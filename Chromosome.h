@@ -51,4 +51,12 @@ struct compare_chromosomes_more
     }
 };
 
+struct compare_chromosomes_eval
+{
+    inline bool operator() (const Chromosome* a, const Chromosome* b)
+    {
+        return a->get_eval() > b->get_eval();
+    }
+};
+
 #endif

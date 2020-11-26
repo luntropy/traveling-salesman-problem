@@ -59,6 +59,7 @@ public:
     std::vector<Chromosome*> get_population() const;
 
     void print_genes() const;
+    void print_best_path();
     void print_total_fitness() const;
     void print_total_eval() const;
     void print_population() const;
