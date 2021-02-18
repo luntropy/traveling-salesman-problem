@@ -10,7 +10,7 @@ The objective of the program is to solve the Traveling Salesman Problem using ge
 - No return to the initial city.
 
 ## About the program
-The program uses genetic algorithm to find the best route. A gene represents a city and a chromosome represents a route. Every chromosome is a valid solution. At least the best individual of each generation should be kept in the population. The program stops when no improvement is detected.
+The program uses **genetic algorithm** to find the best route. A gene represents a city and a chromosome represents a route. Every chromosome is a valid solution. At least the best individual of each generation should be kept in the population. The program stops when no improvement is detected.
 
 ### To run the program
 - Build it using `make`
