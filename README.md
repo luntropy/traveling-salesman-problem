@@ -1,6 +1,8 @@
-# Travelling Salesman Problem
+# Traveling Salesman Problem
 ## Purpose
 The objective of the program is to solve the Traveling Salesman Problem using genetic algorithm.
+
+[Traveling Salesman Problem Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
 
 ## Rules
 - The cities are represented as points.
@@ -18,4 +20,4 @@ The program uses genetic algorithm to find the best route. A gene represents a c
 ### Output
 - The cost of the best current route in the population.
 
-![Output](https://github.com/luntropy/travelling-salesman-problem/blob/main/images/output-example-100-cities.png)
+![Output](https://github.com/luntropy/traveling-salesman-problem/blob/main/images/output-example-100-cities.png)
