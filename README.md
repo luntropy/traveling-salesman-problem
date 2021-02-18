@@ -20,4 +20,5 @@ The program uses genetic algorithm to find the best route. A gene represents a c
 ### Output
 - The cost of the best current route in the population.
 
+### Output for 100 cities
 ![Output](https://github.com/luntropy/traveling-salesman-problem/blob/main/images/output-example-100-cities.png)
