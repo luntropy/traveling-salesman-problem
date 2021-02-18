@@ -6,7 +6,7 @@ The objective of the program is to solve the Traveling Salesman Problem using ge
 
 ## Rules
 - The cities are represented as points.
-- The points are randomly generated in the euclidean space.
+- The points are randomly generated in the Euclidean space.
 - No return to the initial city.
 
 ## About the program
